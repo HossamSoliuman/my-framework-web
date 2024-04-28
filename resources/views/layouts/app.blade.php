@@ -23,7 +23,7 @@
 </head>
 
 <body>
-    @yield('content')
+    @yield('app-content')
     @yield('scripts')
 </body>
 
