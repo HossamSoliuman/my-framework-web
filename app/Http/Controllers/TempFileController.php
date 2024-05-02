@@ -7,13 +7,8 @@ use Illuminate\Http\Request;
 
 class TempFileController extends Controller
 {
-
     public function store(Request $request)
     {
-        $request->validate([
-            'file' => 'required|file',
-        ]);
-        if ($request->hasFile('file')) {
             $file = $request->file('file');
             $originalName = pathinfo($file->getClientOriginalName(), PATHINFO_FILENAME);
             $date = time();
@@ -23,6 +18,7 @@ class TempFileController extends Controller
                 'file_name' => $fileName
             ]);
             return $fileName;
-        }
+
     }
+
 }
