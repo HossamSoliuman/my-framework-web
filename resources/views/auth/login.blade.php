@@ -3,15 +3,15 @@
 @section('app-content')
     <div class="container">
         <div class="row justify-content-center align-items-center" style="height: 100vh;">
-            <div class="col-md-8">
+            <div class="col-md-4">
                 <div class="card">
                     <div class="card-body text-center">
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
 
-                            <div class="mb-3 text-center">
+                            {{-- <div class="mb-3 text-center">
                                 <img src="logo-white.png" alt="Logo" style="max-width: 200px;">
-                            </div>
+                            </div> --}}
 
                             <div class="mb-3">
                                 <label for="email" class="form-label">{{ __('Email Address') }}</label>
