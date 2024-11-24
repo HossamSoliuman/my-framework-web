@@ -10,7 +10,7 @@ class HomeController extends Controller
     {
         $role = auth()->user()->role;
         if ($role == 'admin') {
-            return 'admin';
+            return view('admin.index');
         } else if ($role == 'user')
             return 'user';
     }
